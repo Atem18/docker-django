@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "app"
+version = "2021.09"
+description = ""
+authors = ["Atem18 <contact@atemlire.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.2.6"
+python-dotenv = "^0.19.0"
+psycopg2-binary = "^2.9.1"
+gunicorn = "^20.1.0"
+Pillow = "^8.3.1"
+dumb-init = "^1.2.5"
+
+[tool.poetry.dev-dependencies]
+django-debug-toolbar = "^3.2.1"
+black = "^21.7b0"
+mypy = "^0.910"
+pycodestyle = "^2.7.0"
+django-stubs = "^1.8.0"
+types-pytz = "^2021.1.2"
+flake8 = "^3.9.2"
+
+[tool.vulture]
+min_confidence = 80
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

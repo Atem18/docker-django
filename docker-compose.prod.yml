@@ -1,0 +1,31 @@
+version: "3.9"
+services:
+  db:
+    container_name: db
+    image: postgres:13.4
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=app
+    ports:
+      - "5432:5432"
+  web:
+    container_name: web
+    build:
+      context: .
+    environment:
+      - ALLOWED_HOSTS=["*"]
+      - APP_DB_NAME=app
+      - APP_DB_USER=app
+      - APP_DB_PASSWORD=app
+      - APP_DB_HOST=db
+      - APP_DB_PORT=5432
+      - DEBUG=False
+      - ENV=prod
+      - SECRET_KEY="&^fpuofr*olxe631yb4d769)q!r6)c)=3_=326vq55(tr4+63!"
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

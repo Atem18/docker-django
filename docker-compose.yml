@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  db:
+    container_name: db
+    image: postgres:13.4
+    volumes:
+      - ./dev/db/data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=app
+    ports:
+      - "5432:5432"
+  web:
+    container_name: web
+    build:
+      context: .
+      target: develop-stage
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
