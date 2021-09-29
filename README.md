@@ -17,5 +17,9 @@ SECRET_KEY="django-insecure-g4t5!n2f53ixx)$y!5s9#8!$&$8%d3169@gv!i()nhcr9yk*l0"
 ## Development
 docker-compose up -d
 
+### Using a library that needs to be compiled ? 
+
+Use compiled-lib.dockerfile in docker-images folder as an example
+
 ## Production test
 docker-compose -f docker-compose.prod.yml up -d

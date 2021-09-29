@@ -12,6 +12,10 @@ psycopg2-binary = "^2.9.1"
 gunicorn = "^20.1.0"
 Pillow = "^8.3.1"
 dumb-init = "^1.2.5"
+TA-Lib = { version = "^0.4.21", optional = true }
+
+[tool.poetry.extras]
+talib = ["TA-Lib"]
 
 [tool.poetry.dev-dependencies]
 django-debug-toolbar = "^3.2.1"

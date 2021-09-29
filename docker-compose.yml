@@ -14,12 +14,12 @@ services:
   web:
     container_name: web
     build:
-      context: .
+      context: ./docker-images/.
       target: develop-stage
     env_file:
       - .env
     volumes:
-      - ./app:/app
+      - ./docker-images/app:/app
     ports:
       - "8000:8000"
     depends_on:

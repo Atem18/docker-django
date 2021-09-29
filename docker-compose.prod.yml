@@ -12,7 +12,7 @@ services:
   web:
     container_name: web
     build:
-      context: .
+      context: ./docker-images/.
     environment:
       - ALLOWED_HOSTS=["*"]
       - APP_DB_NAME=app
@@ -24,7 +24,7 @@ services:
       - ENV=prod
       - SECRET_KEY="&^fpuofr*olxe631yb4d769)q!r6)c)=3_=326vq55(tr4+63!"
     volumes:
-      - ./app:/app
+      - ./docker-images/app:/app
     ports:
       - "8000:8000"
     depends_on:
