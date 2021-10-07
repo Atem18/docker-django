@@ -34,7 +34,7 @@ if [[ ${ENV} == "dev" ]];then
 
 elif [[ ${ENV} == "prod" ]];then
 
-  exec gunicorn -c gunicorn_conf.py app.wsgi:application
+  exec gunicorn -c /app/gunicorn_conf.py app.wsgi:application
 
 else
 
