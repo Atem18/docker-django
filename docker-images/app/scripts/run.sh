@@ -32,14 +32,8 @@ if [[ ${ENV} == "dev" ]];then
 
   exec python manage.py runserver 0.0.0.0:8000
 
-elif [[ ${ENV} == "prod" ]];then
-
-  exec gunicorn -c /app/gunicorn_conf.py app.wsgi:application
-
 else
 
-  echo "No authorized env found, exiting..."
-
-  exit 127
+  exec gunicorn -c /app/gunicorn_conf.py app.wsgi:application
 
 fi
