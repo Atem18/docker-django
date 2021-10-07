@@ -34,6 +34,6 @@ if [[ ${ENV} == "dev" ]];then
 
 else
 
-  exec gunicorn -c /app/gunicorn_conf.py app.wsgi:application
+  exec gunicorn -c /app/gunicorn_conf.py app.wsgi
 
 fi
