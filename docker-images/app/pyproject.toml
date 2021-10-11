@@ -24,7 +24,7 @@ mypy = "^0.910"
 pycodestyle = "^2.7.0"
 django-stubs = "^1.8.0"
 types-pytz = "^2021.1.2"
-flake8 = "^3.9.2"
+flake8 = "^4.0.0"
 
 [tool.vulture]
 min_confidence = 80
