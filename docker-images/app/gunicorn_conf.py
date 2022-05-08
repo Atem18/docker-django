@@ -1,7 +1,8 @@
-import json
 import multiprocessing
 import os
 
+max_requests = os.getenv("MAX_REQUESTS", 1000)
+max_requests_jitter = os.getenv("MAX_REQUESTS_JITTER", 50)
 workers_per_core_str = os.getenv("WORKERS_PER_CORE", "1")
 max_workers_str = os.getenv("MAX_WORKERS")
 use_max_workers = None
@@ -46,22 +47,3 @@ accesslog = use_accesslog
 graceful_timeout = int(graceful_timeout_str)
 timeout = int(timeout_str)
 keepalive = int(keepalive_str)
-
-
-# For debugging and testing
-log_data = {
-    "loglevel": loglevel,
-    "workers": workers,
-    "bind": bind,
-    "graceful_timeout": graceful_timeout,
-    "timeout": timeout,
-    "keepalive": keepalive,
-    "errorlog": errorlog,
-    "accesslog": accesslog,
-    # Additional, non-gunicorn variables
-    "workers_per_core": workers_per_core,
-    "use_max_workers": use_max_workers,
-    "host": host,
-    "port": port,
-}
-print(json.dumps(log_data))
