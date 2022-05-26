@@ -20,7 +20,7 @@ talib = ["TA-Lib"]
 [tool.poetry.dev-dependencies]
 django-debug-toolbar = "^3.2.1"
 black = "^21.7b0"
-mypy = "^0.950"
+mypy = "^0.960"
 pycodestyle = "^2.7.0"
 django-stubs = "^1.8.0"
 types-pytz = "^2021.1.2"
