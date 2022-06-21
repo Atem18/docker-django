@@ -298,7 +298,7 @@ python-versions = ">=3.6"
 
 [[package]]
 name = "types-pytz"
-version = "2021.1.2"
+version = "2022.1.0"
 description = "Typing stubs for pytz"
 category = "dev"
 optional = false
@@ -334,7 +334,7 @@ talib = ["TA-Lib"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "f8b12380acd418f20ebe161781b3efcb424ca7b5a65802ad38e1307941eb103b"
+content-hash = "cbeaee6cf8993b711c306b8f3b9c53149bbe54a655694cedcfd889da5f0a8450"
 
 [metadata.files]
 asgiref = [
@@ -599,8 +599,8 @@ tomli = [
     {file = "tomli-1.2.1.tar.gz", hash = "sha256:a5b75cb6f3968abb47af1b40c1819dc519ea82bcc065776a866e8d74c5ca9442"},
 ]
 types-pytz = [
-    {file = "types-pytz-2021.1.2.tar.gz", hash = "sha256:448828a06f2aaa840e57364d866c661645a045e532f817e4f10c8c3ab2b66651"},
-    {file = "types_pytz-2021.1.2-py3-none-any.whl", hash = "sha256:28fb1c0f77f59aebe9b792d073ebfbbbf7b329f9d4af6a6079713a618a1c0f31"},
+    {file = "types-pytz-2022.1.0.tar.gz", hash = "sha256:bbe7eaf93b4fbec4780323af925286d265a6681f50dba57d16dbd8695c3ed63d"},
+    {file = "types_pytz-2022.1.0-py3-none-any.whl", hash = "sha256:20984c0c321d312caac8fd0a0b5456b615cb9cce74473624a794851a606fabae"},
 ]
 types-pyyaml = [
     {file = "types-PyYAML-5.4.10.tar.gz", hash = "sha256:1d9e431e9f1f78a65ea957c558535a3b15ad67ea4912bce48a6c1b613dcf81ad"},
