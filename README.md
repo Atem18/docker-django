@@ -19,7 +19,13 @@ docker-compose up -d
 
 ### Using a library that needs to be compiled ? 
 
-Use compiled-lib.dockerfile in docker-images folder as an example
+Use compiled-lib.dockerfile in docker-images folder as an example and modify the docker-compose to add/modify:
+```yaml
+  container_name: web
+    build:
+      context: ./docker-images/.
+      dockerfile: compiled-lib.dockerfile
+```
 
 ## Production test
 docker-compose -f docker-compose.prod.yml up -d
