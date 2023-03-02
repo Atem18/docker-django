@@ -1,4 +1,4 @@
-FROM python:3.9.7 AS develop-stage
+FROM python:3.11.2 AS develop-stage
 WORKDIR /app
 ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
@@ -21,7 +21,7 @@ RUN poetry install -E talib
 ENTRYPOINT ["dumb-init", "--"]
 CMD ["/app/scripts/run.sh"]
 
-FROM python:3.9.7 AS build-stage
+FROM python:3.11.2 AS build-stage
 WORKDIR /app
 ENV PIP_DEFAULT_TIMEOUT=100 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
@@ -42,7 +42,7 @@ ENV PATH="/venv/bin:$PATH" \
 RUN pip install "poetry==$POETRY_VERSION"
 RUN poetry install --no-dev -E talib
 
-FROM python:3.9.7-slim
+FROM python:3.11.2-slim
 WORKDIR /app
 ENV PATH="/venv/bin:$PATH"
 ENV PYTHONPATH=/app
