@@ -9,7 +9,7 @@ python = "^3.10"
 python-dotenv = "^0.21.0"
 psycopg2-binary = "^2.9.1"
 gunicorn = "^20.1.0"
-Pillow = "^10.0.1"
+Pillow = "^10.2.0"
 dumb-init = "^1.2.5"
 TA-Lib = { version = "^0.4.21", optional = true }
 django = "^4.1.13"
